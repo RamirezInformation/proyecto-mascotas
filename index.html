@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
     
@@ -14,7 +15,8 @@
     <header>
         <div class="contenedor">
             <div class="menu">
-                <img src="imagenes/logo-white.png" alt="">
+                <img src="imagenes/logo-mascotas7.png" alt="">
+                <img class="menu-icon" src="imagenes/menu.png" alt="">
                 <nav>
                     <ul>
                         <li><a href="">Home</a></li>
@@ -28,7 +30,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     <div class="titular">
-        <h1>STAR YOUR FREE WORKOUT WITH US.</h1>
+        <h1>STAR YOUR FREE WORKOUT.</h1>
         <a href="">JOIN OUR GYM</a>
     </div>
     </header>
@@ -38,21 +40,21 @@
                 
                 <div class="tarjeta">
                     <img src="imagenes/icon-1.png" alt="">
-                    <h3>CARDIO WORKOUTS</h3>
+                    <h3>MISIÓN</h3>
                     <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil</p>
                     <a href="">READ MORE</a>
                 </div>
 
                 <div id="segunda-tarjeta" class="tarjeta">
                     <img src="imagenes/icon-2.png" alt="">
-                    <h3>STRENGHT WORKOUTS</h3>
+                    <h3>VISIÓN</h3>
                     <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil</p>
                     <a href="">READ MORE</a>
                 </div>
 
                 <div class="tarjeta">
                     <img src="imagenes/icon-3.png" alt="">
-                    <h3>PUMP WORKOUTS</h3>
+                    <h3>OBJETIVOS</h3>
                     <p>Alienum phaedrum torquatos nec eu, vis detraxit periculis exnihil</p>
                     <a href="">READ MORE</a>
                 </div>
@@ -60,5 +62,92 @@
             </div>
         </div>
     </section>
+    <section id="galeria">
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal-1.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal-2.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal-3.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal-4.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal-4.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal-6.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal-7.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal-8.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+
+    </section>
+    <section id="contact">
+        <div class="contenedor">
+            <h2>Contactos</h2>
+            <div class="info">
+                <p><i class="fas fa-phone-alt"></i>
+                +(591)77777777</p>
+                <p><i class="far fa-envelope"></i>
+                    mascotas@gmail.com</p>
+            </div>
+            <a href="">CONTACTO</a>
+        </div>
+    </section>
+
+
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+  <script>
+      $(document).ready(function(){
+          $('.foto').hover(function(){
+              $(this).find('.oculto').fadeIn();
+              $(this).find('.img-hover').addClass('agrandar');
+          },function(){
+              $(this).find('.oculto').fadeOut();
+              $(this).find('.img-hover').removeClass('agrandar');
+          })
+          $('.menu-icon').click(function(){
+              $('nav').slideToggle();
+          })
+
+      })
+
+  </script>
 </body>
 </html>

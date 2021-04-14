@@ -3,6 +3,9 @@ body{
     padding: 0;
     font-family: 'Montserrat';
 }
+.menu {
+   padding-top: 10px; 
+}
 .contenedor{
     width: 90%;
     max-width: 1280px;
@@ -15,7 +18,7 @@ a{
     text-decoration: none;
 }
 header{
-    background: url(imagenes/encabezado3.jpg);
+    background: url(imagenes/encabezado4.jpg);
     background-size: cover;
     height: 100vh;
 }
@@ -58,14 +61,129 @@ h1{
     text-align: center;
     box-shadow: -1px 0px 5px #0000001f;
     width: 28%;
-    margin-top: -100px;
+    margin-top: 0px;
     background: #fff;
+    padding: 40px 0;
+    border-radius: 6px;
 }
 #segunda-tarjeta{
-    margin: 0 20px;
-    margin-top: -100px;
+    margin: 0 60px;
+    margin-top: 0px;
 }
 
 .tarjeta p{
     font-size: 15px;
+}
+#tarjetas {
+    margin-bottom: 100px;
+}
+
+.tarjeta a {
+    color: #000;
+    font-size: 14px;
+}
+
+.tarjeta h3 {
+    font-style: italic;
+}
+#galeria {
+    display: flex;
+    flex-wrap: wrap;    
+}
+#galeria img {
+    width: 100%;
+    transition: 0.4s;
+}
+#galeria .foto{
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+}
+.oculto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #00000042;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+.oculto h4 {
+    position: relative;
+    top: 40%;
+}
+.agrandar {
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+#contact {
+    background: #000;
+    text-align: center;
+    color: #fff;
+    padding: 60px 0;
+}
+#contact h2 {
+    margin: 0;
+}
+#contact svg {
+    color: #B8DE11;
+}
+.info {
+    display: flex;
+    justify-content: center;
+}
+.info p {
+    margin: 30px;
+}
+#contact a {
+    background: #B8DE11;
+    color: #000;
+    font-style: italic;
+    padding: 20px 40px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+@media (max-width: 800px){
+    .menu {
+        padding-top: 10px;
+    }
+    header ul {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    nav {
+        background: #000;
+        width: 100%;
+        position: absolute;
+        top: 45px;
+        left: 0;
+        display: none;
+    }
+    nav ul li {
+        margin-bottom: 20px;
+    }
+    h1 {
+        font-size: 34px;
+    }
+    .contenedor-tarjetas,#galeria {
+        flex-direction: column;
+    }
+    .tarjeta {
+        width: 100%;
+    }
+    #segunda-tarjeta {
+        margin: 0;
+    }
+    #galeria .foto {
+        width: 100%;
+    }
+    #contact h2 {
+        font-size: 38px;
+    }
+    .info {
+        flex-direction: column;
+    }
 }
