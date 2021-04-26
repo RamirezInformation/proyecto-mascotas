@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,8 @@
     <link rel="stylesheet" href="estilos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
+
 <body>
-    
-
-
     <header>
         <div class="contenedor">
             <div class="menu">
@@ -19,31 +18,32 @@
                 <img class="menu-icon" src="imagenes/menu.png" alt="">
                 <nav>
                     <ul>
-                        <li><a href="">Inicio</a></li>
-                        <li><a href="">Adoptar</a></li>
-                        <li><a href="">Publicar</a></li>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="registro.html">Registrar Mascota</a></li>
                         <li><a href="">Contactos</a></li>
+                        <li><button id="login">Iniciar sesion</button></li>
+                        <li><button id="loginOut">Cerrar sesion</button></li>
                     </ul>
                 </nav>
             </div>
         </div>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
-    <div class="titular">
-        <h1>TU PUEDES SER LA DIFERENCIA.</h1>
-        <a href="">UNETE A NUESTRA COMUNIDAD</a>
-    </div>
+        <div class="titular">
+            <h1>TU PUEDES SER LA DIFERENCIA.</h1>
+            <a href="">UNETE A NUESTRA COMUNIDAD</a>
+        </div>
     </header>
     <section id="tarjetas">
         <div class="contenedor">
             <div class="contenedor-tarjetas">
-                
+
                 <div class="tarjeta">
                     <img src="imagenes/icon-1.png" alt="">
                     <h3>MISIÓN</h3>
                     <p>Rescate, ayuda a mascotas perdidas o encontradas y adopción responsable</p>
-                    <p> 
-                        Contribuir con información que ayude a la construcción de una sociedad 
+                    <p>
+                        Contribuir con información que ayude a la construcción de una sociedad
                         con más educación, consciencia y respeto para los animales.</p>
                     <a href="">READ MORE</a>
                 </div>
@@ -51,7 +51,8 @@
                 <div id="segunda-tarjeta" class="tarjeta">
                     <img src="imagenes/icon-2.png" alt="">
                     <h3>VISIÓN</h3>
-                    <p>Ser una comunidad integral en Bolivia, modelo a seguir y  así poder replicarse en todos los departamentos.</p>
+                    <p>Ser una comunidad integral en Bolivia, modelo a seguir y así poder replicarse en todos los
+                        departamentos.</p>
                     <a href="">READ MORE</a>
                 </div>
 
@@ -123,7 +124,7 @@
             <h2>Contactos</h2>
             <div class="info">
                 <p><i class="fas fa-phone-alt"></i>
-                +(591)77712345</p>
+                    +(591)77712345</p>
                 <p><i class="far fa-envelope"></i>
                     mascotas@gmail.com</p>
             </div>
@@ -133,26 +134,41 @@
 
 
 
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-  <script>
-      $(document).ready(function(){
-          $('.foto').hover(function(){
-              $(this).find('.oculto').fadeIn();
-              $(this).find('.img-hover').addClass('agrandar');
-          },function(){
-              $(this).find('.oculto').fadeOut();
-              $(this).find('.img-hover').removeClass('agrandar');
-          })
-          $('.menu-icon').click(function(){
-              $('nav').slideToggle();
-          })
+    <script>
+        $(document).ready(function () {
+            $('.foto').hover(function () {
+                $(this).find('.oculto').fadeIn();
+                $(this).find('.img-hover').addClass('agrandar');
+            }, function () {
+                $(this).find('.oculto').fadeOut();
+                $(this).find('.img-hover').removeClass('agrandar');
+            })
+            $('.menu-icon').click(function () {
+                $('nav').slideToggle();
+            })
 
-      })
+        })
 
-  </script>
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBd4sM1q3Qm1KFADIUxlAoTL3SpTSJbOWM",
+            authDomain: "mascotas---la-paz.firebaseapp.com",
+            projectId: "mascotas---la-paz",
+            storageBucket: "mascotas---la-paz.appspot.com",
+            messagingSenderId: "158114473284",
+            appId: "1:158114473284:web:ea27973f59885b47c66311"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js"></script>
 </body>
+
 </html>
