@@ -21,8 +21,6 @@
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="registro.html">Registrar Mascota</a></li>
                         <li><a href="">Contactos</a></li>
-                        <li><button id="login">Iniciar sesion</button></li>
-                        <li><button id="loginOut">Cerrar sesion</button></li>
                     </ul>
                 </nav>
             </div>
@@ -138,19 +136,7 @@
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     <script>
-        $(document).ready(function () {
-            $('.foto').hover(function () {
-                $(this).find('.oculto').fadeIn();
-                $(this).find('.img-hover').addClass('agrandar');
-            }, function () {
-                $(this).find('.oculto').fadeOut();
-                $(this).find('.img-hover').removeClass('agrandar');
-            })
-            $('.menu-icon').click(function () {
-                $('nav').slideToggle();
-            })
-
-        })
+     
 
     </script>
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>

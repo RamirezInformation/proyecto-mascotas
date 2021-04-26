@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos/estiloRegistro.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 
@@ -21,8 +23,6 @@
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="">Registrar Mascota</a></li>
                         <li><a href="">Contactos</a></li>
-                        <li><button id="login">Iniciar sesion</button></li>
-                        <li><button id="loginOut">Cerrar sesion</button></li>
                     </ul>
                 </nav>
             </div>
@@ -30,20 +30,34 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
     </header>
-    <section id="galeria">
-        <div class="registro">
+    <section id="registro">
+        <div class="contenedorRegistro">
+            <h2>Registro de mascotas</h2>
+            <li><button id="login">Iniciar sesion</button></li>
+            <li><button id="loginOut">Cerrar sesion</button></li>
+            <div class="registroOculto">
+                <div id="fotoGoogle"></div>
+                <div class="info"></div>
+                <input class="form-control" type="text" placeholder="Readonly input here…">
+                
+                <select class="form-control" style="margin-top: 20px;">
+                    <option>Mascota perdida</option>
+                    <option>Mascota encontrada</option>
+                  </select>
+                  
+                  <div class="input-group" style="margin-top: 20px">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" >Descripcion</span>
+                    </div>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                  </div>
 
-        </div>
-
-    </section>
-    <section id="contact">
-        <div class="contenedor">
-            <h2>Contactos</h2>
-            <div class="info">
-                <p><i class="fas fa-phone-alt"></i>
-                    +(591)77712345</p>
-                <p><i class="far fa-envelope"></i>
-                    mascotas@gmail.com</p>
+                  <div class="custom-file" style="margin-top: 20px;">
+                    <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+                    <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                  </div>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.9538386650474!2d-3.6137609843172185!3d37.17756797987259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fc92a8f925ff%3A0x22830a5e492b95b1!2zQ2FsbGUgTcOpbmRleiBOw7rDsWV6LCAxMCwgMTgwMDMgR3JhbmFkYQ!5e0!3m2!1ses!2ses!4v1472711730435" width="600" height="450" frameborder="0" style="border:0" allowfullscreen</iframe></iframe>
+                  <button type="button" class="btn btn-outline-success" style="margin-top: 20px;">Enviar datos</button>
             </div>
             <a href="">CONTACTO</a>
         </div>
@@ -53,23 +67,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('.foto').hover(function () {
-                $(this).find('.oculto').fadeIn();
-                $(this).find('.img-hover').addClass('agrandar');
-            }, function () {
-                $(this).find('.oculto').fadeOut();
-                $(this).find('.img-hover').removeClass('agrandar');
-            })
-            $('.menu-icon').click(function () {
-                $('nav').slideToggle();
-            })
-
-        })
-
-    </script>
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
 

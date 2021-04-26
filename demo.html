@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <div class="menu">
+                <img src="imagenes/logo-mascotas7.png" alt="">
+                <img class="menu-icon" src="imagenes/menu.png" alt="">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="registro.html">Registrar Mascota</a></li>
+                        <li><a href="">Contactos</a></li>
+                        <li><button id="login">Iniciar sesion</button></li>
+                        <li><button id="loginOut">Cerrar sesion</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+        <div class="titular">
+            <h1>TU PUEDES SER LA DIFERENCIA.</h1>
+            <a href="">UNETE A NUESTRA COMUNIDAD</a>
+        </div>
+    </header>
+    <section id="tarjetas">
+        <div class="contenedor">
+            <div class="contenedor-tarjetas">
+
+                <div class="tarjeta">
+                    <img src="imagenes/icon-1.png" alt="">
+                    <h3>MISIÓN</h3>
+                    <p>Rescate, ayuda a mascotas perdidas o encontradas y adopción responsable</p>
+                    <p>
+                        Contribuir con información que ayude a la construcción de una sociedad
+                        con más educación, consciencia y respeto para los animales.</p>
+                    <a href="">READ MORE</a>
+                </div>
+
+                <div id="segunda-tarjeta" class="tarjeta">
+                    <img src="imagenes/icon-2.png" alt="">
+                    <h3>VISIÓN</h3>
+                    <p>Ser una comunidad integral en Bolivia, modelo a seguir y así poder replicarse en todos los
+                        departamentos.</p>
+                    <a href="">READ MORE</a>
+                </div>
+
+                <div class="tarjeta">
+                    <img src="imagenes/icon-3.png" alt="">
+                    <h3>OBJETIVOS</h3>
+                    <p>Rescatar perros/gatos en estado de vulnerabilidad</p>
+                    <p>Promover la adopción y esterilización</p>
+                    <p>Solución INTEGRAL al problema de abandono de animales.</p>
+                    <a href="">READ MORE</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="galeria">
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal_1.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal_2.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal_12.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal_4.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal_8.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal_9.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal_10.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+        <div class="foto">
+            <img class="img-hover" src="imagenes/gal_11.jpg" alt="">
+            <div class="oculto">
+                <h4>Mascota 1</h4>
+            </div>
+        </div>
+
+    </section>
+    <section id="contact">
+        <div class="contenedor">
+            <h2>Contactos</h2>
+            <div class="info">
+                <p><i class="fas fa-phone-alt"></i>
+                    +(591)77712345</p>
+                <p><i class="far fa-envelope"></i>
+                    mascotas@gmail.com</p>
+            </div>
+            <a href="">CONTACTO</a>
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        
+
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
+
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBd4sM1q3Qm1KFADIUxlAoTL3SpTSJbOWM",
+            authDomain: "mascotas---la-paz.firebaseapp.com",
+            projectId: "mascotas---la-paz",
+            storageBucket: "mascotas---la-paz.appspot.com",
+            messagingSenderId: "158114473284",
+            appId: "1:158114473284:web:ea27973f59885b47c66311"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>

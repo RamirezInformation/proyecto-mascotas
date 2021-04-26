@@ -10,7 +10,10 @@ $('#login').click(function () {
             console.log(result.user);
             $('#login').hide();
             $('#loginOut').show();
-            $('.menu nav ul').append(" <img width='50px' src='" + result.user.photoURL + "' id='iconFoto'/>");
+            $('#fotoGoogle').append(" <img src='" + result.user.photoURL + "' id='iconFoto'/>");
+            $('.info').append("<p><i class='fas fa-phone-alt'></i>   "+ result.user.displayName + "</p>");
+            $('.info').append("<p><i class='far fa-envelope'></i>   "+ result.user.email + "</p>");
+            $('.registroOculto').show();
             guardarDatos(result.user);
         });
 
@@ -31,9 +34,25 @@ $('#loginOut').click(function () {
             $('#loginOut').hide();
             $('#iconFoto').hide();
             $('#login').show();
+            $('.registroOculto').hide();
         })
         .catch(function (error) {
             console.log('error');
         })
 
 })
+
+
+$(document).ready(function () {
+            $('.foto').hover(function () {
+                $(this).find('.oculto').fadeIn();
+                $(this).find('.img-hover').addClass('agrandar');
+            }, function () {
+                $(this).find('.oculto').fadeOut();
+                $(this).find('.img-hover').removeClass('agrandar');
+            })
+            $('.menu-icon').click(function () {
+                $('nav').slideToggle();
+            })
+
+        })
