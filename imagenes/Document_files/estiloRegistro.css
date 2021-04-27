@@ -4,7 +4,7 @@ body{
     font-family: 'Montserrat';
 }
 .menu {
-   padding-top: 15px; 
+   padding-top: 10px; 
 }
 .contenedor{
     width: 90%;
@@ -17,7 +17,7 @@ body{
     margin: auto;
 }
 .registroOculto{
-    display: none;
+    
 }
 li{
     list-style: none;
@@ -30,7 +30,7 @@ header{
     
     background-color: #6f8608;
     background-size: cover;
-    height: 15vh;
+    height: 10vh;
 }
 .menu{
     display: flex;

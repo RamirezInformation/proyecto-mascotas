@@ -16,7 +16,7 @@
     <header>
         <div class="contenedor">
             <div class="menu">
-                <img src="imagenes/logo-mascotas7.png" alt="">
+                <img src="imagenes/logo-mascotas8.png" alt="">
                 <img class="menu-icon" src="imagenes/menu.png" alt="">
                 <nav>
                     <ul>
@@ -38,28 +38,150 @@
             <div class="registroOculto">
                 <div id="fotoGoogle"></div>
                 <div class="info"></div>
-                <input class="form-control" type="text" placeholder="Readonly input here…">
-                
-                <select class="form-control" style="margin-top: 20px;">
-                    <option>Mascota perdida</option>
-                    <option>Mascota encontrada</option>
-                  </select>
-                  
-                  <div class="input-group" style="margin-top: 20px">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" >Descripcion</span>
-                    </div>
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
-                  </div>
 
-                  <div class="custom-file" style="margin-top: 20px;">
-                    <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-                    <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
-                  </div>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.9538386650474!2d-3.6137609843172185!3d37.17756797987259!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd71fc92a8f925ff%3A0x22830a5e492b95b1!2zQ2FsbGUgTcOpbmRleiBOw7rDsWV6LCAxMCwgMTgwMDMgR3JhbmFkYQ!5e0!3m2!1ses!2ses!4v1472711730435" width="600" height="450" frameborder="0" style="border:0" allowfullscreen</iframe></iframe>
-                  <button type="button" class="btn btn-outline-success" style="margin-top: 20px;">Enviar datos</button>
+
+
+
+                <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">Tipo</label>
+                            <select class="form-control" id="dato1" required>
+                                <option>Seleccione una opción</option>
+                                <option>Canino</option>
+                                <option>Felino</option>
+                            </select>
+                            <div class="valid-feedback">
+                                Se ve bien!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom04">Raza</label>
+                            <input type="text" class="form-control" id="dato2"
+                                placeholder="Raza de la mascota" required>
+                            <div class="invalid-feedback">
+                                Proporcione datos validos.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">Estado</label>
+                            <select class="form-control" id="dato3" placeholder="tipo" required>
+                                <option>Seleccione una opción</option>
+                                <option>Perdido</option>
+                                <option>Encontrado</option>
+                            </select>
+                            <div class="valid-feedback">
+                                Se ve bien!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom04">Nombre</label>
+                            <input type="text" class="form-control" id="dato4"
+                                placeholder="Nombre de la mascota" required>
+                            <div class="invalid-feedback">
+                                Proporcione datos validos.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom04">Edad</label>
+                            <input type="text" class="form-control" id="dato5"
+                                placeholder="Edad aproximada de la mascota" required>
+                            <div class="invalid-feedback">
+                                Proporcione datos validos.
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom04">Color</label>
+                            <input type="text" class="form-control" id="dato6"
+                                placeholder="Color de la mascota" required>
+                            <div class="invalid-feedback">
+                                Proporcione datos validos.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">Tamaño</label>
+                            <select class="form-control" id="dato7" required>
+                                <option>Seleccione una opción</option>
+                                <option>Grande</option>
+                                <option>Pequeño</option>
+                                <option>Mediano</option>
+                            </select>
+                            <div class="valid-feedback">
+                                Se ve bien!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom01">Estado de salud</label>
+                            <select class="form-control" id="dato8" required>
+                                <option>Seleccione una opción</option>
+                                <option>Saludable</option>
+                                <option>Recibe medicamentos</option>
+                                <option>Longevo</option>
+                                <option>Necesita atención medica</option>
+                            </select>
+                            <div class="valid-feedback">
+                                Buen trabajo!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationCustom08">Suba una fotografia</label>
+                            <input type="file" style="padding-left: 10%;" class="form-control-file"
+                                id="dato9" required>
+                            <div class="invalid-feedback">
+                                Debe introducir una fotografia.
+                            </div>
+                            <div class="valid-feedback">
+                                Se ve bien!
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group" style="margin-top: 20px;margin-bottom: 20px;">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" style="background-color: green; color: black;">Descripcion</span>
+                            </div>
+                            <textarea id="dato10" class="form-control" aria-label="With textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom04">Ubicacion</label>
+                            <input type="text" class="form-control" id="dato11"
+                                placeholder="Proporcione una direccion" required>
+                            <div class="invalid-feedback">
+                                Proporcione datos validos.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">Fecha</label>
+                            <input type="text" class="form-control" id="dato12"
+                                placeholder="Fecha de hallazgo o perdida" required>
+                            <div class="invalid-feedback">
+                                Proporcione datos validos.
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">Telefono</label>
+                            <input type="text" class="form-control" id="dato13"
+                                placeholder="Numero telefono o celular" required>
+                            <div class="invalid-feedback">
+                                Proporcione datos validos.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button onclick="ayudame()" type="submit" class="btn btn-outline-success" style="margin-top: 20px;">Enviar
+                        datos</button>
+                </form>
+
             </div>
-            <a href="">CONTACTO</a>
         </div>
     </section>
 
@@ -83,6 +205,7 @@
         firebase.initializeApp(firebaseConfig);
     </script>
     <script src="app.js"></script>
+    
 </body>
 
 </html>
