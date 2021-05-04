@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilos/estiloRegistro.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 
@@ -35,10 +34,17 @@
             <h2>Registro de mascotas</h2>
             <li><button id="login">Iniciar sesion</button></li>
             <li><button id="loginOut">Cerrar sesion</button></li>
+
+
             <div class="registroOculto">
                 <div id="fotoGoogle"></div>
                 <div class="info"></div>
+                <div class="tipoRegistro">
 
+                    <button id="tipoRegistro1" class="btn btn-secondary btn-lg active">Mascota perdida</button>
+                    <button id="tipoRegistro2" class="btn btn-secondary btn-lg active">Mascota encontrada</button>
+                    <button id="tipoRegistro3" class="btn btn-secondary btn-lg active">Mascota avistada</button>
+                </div>
 
 
 
@@ -57,8 +63,7 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom04">Raza</label>
-                            <input type="text" class="form-control" id="dato2"
-                                placeholder="Raza de la mascota" required>
+                            <input type="text" class="form-control" id="dato2" placeholder="Raza de la mascota" required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
@@ -78,24 +83,21 @@
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom04">Nombre</label>
-                            <input type="text" class="form-control" id="dato4"
-                                placeholder="Nombre de la mascota" required>
+                            <input type="text" class="form-control" id="dato4" placeholder="Nombre de la mascota" required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom04">Edad</label>
-                            <input type="text" class="form-control" id="dato5"
-                                placeholder="Edad aproximada de la mascota" required>
+                            <input type="text" class="form-control" id="dato5" placeholder="Edad aproximada de la mascota" required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom04">Color</label>
-                            <input type="text" class="form-control" id="dato6"
-                                placeholder="Color de la mascota" required>
+                            <input type="text" class="form-control" id="dato6" placeholder="Color de la mascota" required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
@@ -130,8 +132,7 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom08">Suba una fotografia</label>
-                            <input type="file" style="padding-left: 10%;" class="form-control-file"
-                                id="dato9" required>
+                            <input type="file" style="padding-left: 10%;" class="form-control-file" id="dato9" required>
                             <div class="invalid-feedback">
                                 Debe introducir una fotografia.
                             </div>
@@ -144,7 +145,7 @@
                     <div class="form-row">
                         <div class="input-group" style="margin-top: 20px;margin-bottom: 20px;">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" style="background-color: green; color: black;">Descripcion</span>
+                                <span class="input-group-text" style="background-color: #1e7e34; color: black;">Descripcion</span>
                             </div>
                             <textarea id="dato10" class="form-control" aria-label="With textarea"></textarea>
                         </div>
@@ -152,24 +153,21 @@
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom04">Ubicacion</label>
-                            <input type="text" class="form-control" id="dato11"
-                                placeholder="Proporcione una direccion" required>
+                            <input type="text" class="form-control" id="dato11" placeholder="Proporcione una direccion" required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="validationCustom04">Fecha</label>
-                            <input type="text" class="form-control" id="dato12"
-                                placeholder="Fecha de hallazgo o perdida" required>
+                            <input type="text" class="form-control" id="dato12" placeholder="Fecha de hallazgo o perdida" required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="validationCustom04">Telefono</label>
-                            <input type="text" class="form-control" id="dato13"
-                                placeholder="Numero telefono o celular" required>
+                            <input type="text" class="form-control" id="dato13" placeholder="Numero telefono o celular" required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
@@ -187,8 +185,7 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
 
@@ -205,7 +202,7 @@
         firebase.initializeApp(firebaseConfig);
     </script>
     <script src="app.js"></script>
-    
+
 </body>
 
 </html>

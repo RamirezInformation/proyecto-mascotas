@@ -67,21 +67,22 @@ h1{
     text-align: center;
     box-shadow: -1px 0px 5px #0000001f;
     width: 28%;
-    margin-top: 0px;
+    margin-top: 30px;
     background: #fff;
     padding: 40px 0;
     border-radius: 6px;
 }
 #segunda-tarjeta{
     margin: 0 60px;
-    margin-top: 0px;
+    margin-top: 30px;
 }
 
 .tarjeta p{
     font-size: 15px;
+    
 }
 #tarjetas {
-    margin-bottom: 100px;
+    margin-bottom: 30px;
 }
 
 .tarjeta a {
@@ -94,7 +95,8 @@ h1{
 }
 #galeria {
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;
+    background-color: rgb(34, 33, 33);
 }
 #galeria img {
     width: 100%;
@@ -202,6 +204,7 @@ h1{
     }
     #segunda-tarjeta {
         margin: 0;
+        margin-top: 30px;
     }
     #galeria .foto {
         width: 100%;
