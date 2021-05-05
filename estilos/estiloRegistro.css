@@ -23,6 +23,9 @@ body {
 .registroOculto {
     display: none;
 }
+#formulario1 {
+    display: none;
+}
 
 li {
     list-style: none;

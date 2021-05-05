@@ -18,7 +18,7 @@
                 <img src="imagenes/logo-mascotas8.png" alt="">
                 <img class="menu-icon" src="imagenes/menu.png" alt="">
                 <nav>
-                    <ul>
+                    <ul id="menuRegistro">
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="">Registrar Mascota</a></li>
                         <li><a href="">Contactos</a></li>
@@ -41,14 +41,14 @@
                 <div class="info"></div>
                 <div class="tipoRegistro">
 
-                    <button id="tipoRegistro1" class="btn btn-secondary btn-lg active">Mascota perdida</button>
-                    <button id="tipoRegistro2" class="btn btn-secondary btn-lg active">Mascota encontrada</button>
+                    <button id="tipoRegistro1" class="btn btn-secondary btn-lg active">Mascota perdida / Mascota encontrada</button>
                     <button id="tipoRegistro3" class="btn btn-secondary btn-lg active">Mascota avistada</button>
+                    <button id="tipoRegistro4" class="btn btn-secondary btn-lg active">Mis publicaciones</button>
                 </div>
 
 
 
-                <form class="needs-validation" novalidate>
+                <form id="formulario1" class="needs-validation" novalidate>
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom01">Tipo</label>
@@ -175,7 +175,7 @@
 
                     </div>
 
-                    <button onclick="ayudame()" type="submit" class="btn btn-outline-success" style="margin-top: 20px;">Enviar
+                    <button type="submit" class="btn btn-outline-success" style="margin-top: 20px;">Enviar
                         datos</button>
                 </form>
 
