@@ -1,3 +1,4 @@
+var sesion = false;
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         console.log('user logged in: ', user);
@@ -10,6 +11,7 @@ firebase.auth().onAuthStateChanged(user => {
         $('.registroOculto').show();
         usuario = user;
         guardarDatos(user);
+        sesion = true;
 
     } else {
         console.log('user logged out');
@@ -17,7 +19,11 @@ firebase.auth().onAuthStateChanged(user => {
         $('#iconFoto').hide();
         $('#login').show();
         $('.registroOculto').hide();
-
+        $('.formulario3').hide();
+        if (sesion) {
+            location.reload();
+            sesion = false;
+        }
     }
 })
 
@@ -49,10 +55,32 @@ fileButton.addEventListener('change', function (e) {
 //actualiza la galeria al detectar cambios
 var starCountRef = firebase.database().ref('mascotas/');
 starCountRef.on('child_added', (snapshot) => {
-    var elem1 = "<div class='foto'><img class='img-hover' src='" + snapshot.val().fotografia + "'>";
-    var elem2 = "<div class='oculto'><a class='prueba' title='<h2>" + snapshot.val().estado + "</h2>' href=" + snapshot.val().fotografia + " data-lightbox='roadtrip'>";
-    var elem3 = "<img class='img-hover' src=" + snapshot.val().fotografia + " alt=''></a></div></div>";
-    $("#galeria").append(elem1 + elem2 + elem3);
+    var ax1 = snapshot.val().fotografia;
+    var ax2 = snapshot.val().estado;
+    var ax3 = snapshot.val().tipo;
+    var ax4 = snapshot.val().color;
+    var ax5 = snapshot.val().tamaño;
+    var ax6 = snapshot.val().ubicacion;
+    var ax7 = snapshot.val().fecha;
+    var ax8 = snapshot.val().telefono;
+    var axxx = `
+    <div class='foto'>
+        <img class='img-hover' src="${ax1}">
+        <div class='oculto' >   
+            <a class='prueba' title='
+            <h2 style="margin-top: 20px;margin-bottom: 20px;">Estado:  ${ax2}</h2>
+            <h2 style="margin-top: 20px;margin-bottom: 20px;">tamaño:   ${ax5}</h2>
+            <h2 style="margin-top: 20px;margin-bottom: 20px;">Dirección:   ${ax6}</h2>
+            <h2 style="margin-top: 20px;margin-bottom: 20px;">Fecha:   ${ax7}</h2>
+            <h2 style="margin-top: 20px;margin-bottom: 20px;">Telefono:   ${ax8}</h2>
+            ' href="${ax1}" data-lightbox='roadtrip'>
+                <img class='img-hover' src="${ax1}" alt=''>
+                
+            </a>
+        </div>
+    </div>`;
+    $("#galeria").append(axxx);
+
     $(document).ready(function () {
         $('.foto').hover(function () {
             $(this).find('.oculto').fadeIn();
@@ -61,7 +89,6 @@ starCountRef.on('child_added', (snapshot) => {
             $(this).find('.oculto').fadeOut();
             $(this).find('.img-hover').removeClass('agrandar');
         })
-
 
     })
 });
@@ -101,7 +128,7 @@ starCountRef.on('child_added', (snapshot) => {
                         telefono: document.getElementById("dato13").value
                     }
                     firebase.database().ref("mascotas/").push(mascota)
-
+                    sw = 0;
                 }
                 form.classList.add('was-validated');
             }, false);
@@ -148,22 +175,73 @@ $('.menu-icon').click(function () {
 
 
 $('#tipoRegistro1').click(function () {
+    console.log((this).id);
     document.getElementById("tipoRegistro1").className = "btn btn-success btn-lg active";
+    document.getElementById("tipoRegistro2").className = "btn btn-secondary btn-lg active";
     document.getElementById("tipoRegistro3").className = "btn btn-secondary btn-lg active";
-    document.getElementById("tipoRegistro4").className = "btn btn-secondary btn-lg active";
     $('#formulario1').show();
-    
+    $('#formulario3').hide();
+
 })
 
+$('#tipoRegistro2').click(function () {
+    document.getElementById("tipoRegistro1").className = "btn btn-secondary btn-lg active";
+    document.getElementById("tipoRegistro2").className = "btn btn-success btn-lg active";
+    document.getElementById("tipoRegistro3").className = "btn btn-secondary btn-lg active";
+    $('#formulario1').hide();
+    $('#formulario3').hide();
+})
+var sw = 0;
 $('#tipoRegistro3').click(function () {
     document.getElementById("tipoRegistro1").className = "btn btn-secondary btn-lg active";
+    document.getElementById("tipoRegistro2").className = "btn btn-secondary btn-lg active";
     document.getElementById("tipoRegistro3").className = "btn btn-success btn-lg active";
-    document.getElementById("tipoRegistro4").className = "btn btn-secondary btn-lg active";
     $('#formulario1').hide();
+    $('#formulario3').hide();
+    $('#formulario3').show();
+    console.log(usuario);
+    //-----------------
+    if (sw == 0) {
+        sw = 1;
+        console.log("esta es la base de datos");
+        var cont = 0;
+        starCountRef.on('child_added', (snapshot) => {
+            cont = cont + 1;
+            if (snapshot.val().uid == usuario.uid) {
+                var ax1 = snapshot.val().fotografia;
+                var ax2 = snapshot.val().estado;
+                var ax3 = snapshot.val().tipo;
+                var ax4 = snapshot.val().color;
+                var ax5 = snapshot.val().tamaño;
+                var ax6 = snapshot.val().ubicacion;
+                var ax7 = snapshot.val().fecha;
+                var ax8 = snapshot.val().telefono;
+                var aux = `
+            <div class="ej1">
+                <img class='imagenForm3' src="${ax1}">
+                <div class="ej2">
+                    <p class='infMascota'>Estado:   ${ax2}</p>
+                    <p class='infMascota'>tamaño:   ${ax5}</p>
+                    <p class='infMascota'>Dirección:   ${ax6}</p>
+                    <p class='infMascota'>Fecha:   ${ax7}</p>
+                    <p class='infMascota'>Telefono:   ${ax8}</p>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </div>
+            </div>
+            
+            `;
+                $("#imagen_de_mascota").append(aux);
+            }
+
+
+        });
+    }
+    //-----------------
+
+
+
+
 })
-$('#tipoRegistro4').click(function () {
-    document.getElementById("tipoRegistro1").className = "btn btn-secondary btn-lg active";
-    document.getElementById("tipoRegistro3").className = "btn btn-secondary btn-lg active";
-    document.getElementById("tipoRegistro4").className = "btn btn-success btn-lg active";
-    $('#formulario1').hide();
-})
+
+
+

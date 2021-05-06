@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="background-color: black;">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilos/estiloRegistro.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 
@@ -15,13 +16,14 @@
     <header>
         <div class="contenedor">
             <div class="menu">
-                <img src="imagenes/logo-mascotas8.png" alt="">
-                <img class="menu-icon" src="imagenes/menu.png" alt="">
+                <img src="imagenes/logoMascotas_blanco.png" style="width: 20%;" alt="">
+                <img class="menu-icon" src="imagenes/menu.png" style="display: none;" alt="">
                 <nav>
                     <ul id="menuRegistro">
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="">Registrar Mascota</a></li>
-                        <li><a href="">Contactos</a></li>
+                        <li><button id="login" style="background: #00000050;">Iniciar sesion</button></li>
+                        <li><button id="loginOut" style="background: #00000050;">Cerrar sesion</button></li>
                     </ul>
                 </nav>
             </div>
@@ -32,8 +34,7 @@
     <section id="registro">
         <div class="contenedorRegistro">
             <h2>Registro de mascotas</h2>
-            <li><button id="login">Iniciar sesion</button></li>
-            <li><button id="loginOut">Cerrar sesion</button></li>
+            
 
 
             <div class="registroOculto">
@@ -41,9 +42,10 @@
                 <div class="info"></div>
                 <div class="tipoRegistro">
 
-                    <button id="tipoRegistro1" class="btn btn-secondary btn-lg active">Mascota perdida / Mascota encontrada</button>
-                    <button id="tipoRegistro3" class="btn btn-secondary btn-lg active">Mascota avistada</button>
-                    <button id="tipoRegistro4" class="btn btn-secondary btn-lg active">Mis publicaciones</button>
+                    <button id="tipoRegistro1" class="btn btn-secondary btn-lg active">Mascota perdida / Mascota
+                        encontrada</button>
+                    <button id="tipoRegistro2" class="btn btn-secondary btn-lg active">Mascota avistada</button>
+                    <button id="tipoRegistro3" class="btn btn-secondary btn-lg active">Mis publicaciones</button>
                 </div>
 
 
@@ -63,7 +65,8 @@
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom04">Raza</label>
-                            <input type="text" class="form-control" id="dato2" placeholder="Raza de la mascota" required>
+                            <input type="text" class="form-control" id="dato2" placeholder="Raza de la mascota"
+                                required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
@@ -83,21 +86,24 @@
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom04">Nombre</label>
-                            <input type="text" class="form-control" id="dato4" placeholder="Nombre de la mascota" required>
+                            <input type="text" class="form-control" id="dato4" placeholder="Nombre de la mascota"
+                                required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom04">Edad</label>
-                            <input type="text" class="form-control" id="dato5" placeholder="Edad aproximada de la mascota" required>
+                            <input type="text" class="form-control" id="dato5"
+                                placeholder="Edad aproximada de la mascota" required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationCustom04">Color</label>
-                            <input type="text" class="form-control" id="dato6" placeholder="Color de la mascota" required>
+                            <input type="text" class="form-control" id="dato6" placeholder="Color de la mascota"
+                                required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
@@ -145,7 +151,8 @@
                     <div class="form-row">
                         <div class="input-group" style="margin-top: 20px;margin-bottom: 20px;">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" style="background-color: #1e7e34; color: black;">Descripcion</span>
+                                <span class="input-group-text"
+                                    style="background-color: #1e7e34; color: black;">Descripcion</span>
                             </div>
                             <textarea id="dato10" class="form-control" aria-label="With textarea"></textarea>
                         </div>
@@ -153,21 +160,24 @@
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom04">Ubicacion</label>
-                            <input type="text" class="form-control" id="dato11" placeholder="Proporcione una direccion" required>
+                            <input type="text" class="form-control" id="dato11" placeholder="Proporcione una direccion"
+                                required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="validationCustom04">Fecha</label>
-                            <input type="text" class="form-control" id="dato12" placeholder="Fecha de hallazgo o perdida" required>
+                            <input type="text" class="form-control" id="dato12"
+                                placeholder="Fecha de hallazgo o perdida" required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
                         </div>
                         <div class="col-md-3 mb-3">
                             <label for="validationCustom04">Telefono</label>
-                            <input type="text" class="form-control" id="dato13" placeholder="Numero telefono o celular" required>
+                            <input type="text" class="form-control" id="dato13" placeholder="Numero telefono o celular"
+                                required>
                             <div class="invalid-feedback">
                                 Proporcione datos validos.
                             </div>
@@ -180,12 +190,18 @@
                 </form>
 
             </div>
+            <div id="formulario3" class="registroOculto3">
+                <div id="imagen_de_mascota">
+                </div>
+            </div>
+
         </div>
     </section>
 
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-auth.js"></script>
 
